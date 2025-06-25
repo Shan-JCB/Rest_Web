@@ -1,0 +1,178 @@
+/* Navbar.css */
+
+/* --- Colores y Estilos Base del Navbar --- */
+.navbar-custom {
+  background-color: #3d0202f0 !important; /* Un rojo oscuro o borgoña profundo para 'Sabor Andino' */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para profundidad */
+  transition: background-color 0.3s ease; /* Suave transición de color */
+}
+
+/* Efecto al hacer scroll para un navbar que cambia de color si es deseado */
+/* .navbar-custom.scrolled {
+  background-color: rgba(163, 42, 41, 0.95) !important; 
+  backdrop-filter: blur(5px); 
+} */
+
+.navbar-brand {
+  font-size: 1.8rem; /* Tamaño de fuente más grande para la marca */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  color: #FFFFFF !important; /* Asegurar color blanco */
+}
+
+.navbar-brand img {
+  max-height: 45px; /* Tamaño del logo ligeramente más grande */
+  transition: transform 0.3s ease;
+}
+
+/* Animación sutil para el logo */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.navbar-brand img.animate__pulse {
+  animation: pulse 2s infinite; /* Aplica la animación personalizada */
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5); /* Borde claro para el toggler */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Icono de hamburguesa blanco */
+}
+
+/* --- Estilos de los Enlaces de Navegación --- */
+.nav-link {
+  color: #FFFFFF !important; /* Color blanco para los enlaces */
+  font-weight: 500; /* Ligera negrita */
+  padding: 0.6rem 1rem; /* Padding más generoso */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  display: flex; /* Para alinear íconos y texto */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* Fondo semitransparente al hover */
+  color: #FFFFFF !important; /* Asegura el color blanco */
+  transform: translateY(-2px); /* Ligero levantamiento al hover */
+}
+
+.nav-item .nav-link.active { /* Estilo para el enlace activo si Bootstrap lo maneja */
+  background-color: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+}
+
+/* --- Dropdown para Admin --- */
+.dropdown-menu {
+  background-color: #8C2423; /* Fondo oscuro similar al navbar */
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu-dark .dropdown-item {
+  color: #FFFFFF; /* Color de texto blanco para los items */
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo claro al hover */
+  color: #FFFFFF;
+}
+
+/* --- Estilos de Usuario y Botones de Sesión --- */
+.nav-link-username {
+  color: #F8F9FA; /* Un gris muy claro para el texto de bienvenida */
+  font-weight: 600;
+  padding: 0.6rem 0.5rem;
+}
+
+/* Botón Cerrar Sesión */
+.btn-outline-light {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #FFFFFF;
+  color: #A32A29; /* Color del navbar al hover */
+  transform: translateY(-2px);
+}
+
+/* Botón Iniciar Sesión */
+.btn-primary.rounded-pill {
+  background-color: #FFC107; /* Amarillo para iniciar sesión */
+  border-color: #FFC107;
+  color: #212529; /* Texto oscuro para contraste */
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary.rounded-pill:hover {
+  background-color: #E0A800; /* Amarillo más oscuro al hover */
+  border-color: #E0A800;
+  transform: translateY(-2px);
+}
+
+/* Botón Registrarse */
+.btn-outline-light.rounded-pill {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-outline-light.rounded-pill:hover {
+  background-color: #FFFFFF;
+  color: #A32A29;
+  transform: translateY(-2px);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) { /* Para pantallas pequeñas (móviles y tablets) */
+  .navbar-collapse {
+    background-color: #A32A29; /* Fondo oscuro para el menú colapsado */
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-nav {
+    align-items: flex-start; /* Alinea los items a la izquierda en móvil */
+  }
+
+  .nav-item {
+    width: 100%; /* Ocupa todo el ancho */
+    margin-bottom: 0.5rem; /* Espacio entre ítems */
+  }
+
+  .nav-link, 
+  .btn-outline-light, 
+  .btn-primary {
+    width: 100%; /* Botones y enlaces ocupan todo el ancho */
+    text-align: left; /* Alinea texto a la izquierda */
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .nav-link-username {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    justify-content: flex-start; /* Alinea el icono y el texto a la izquierda */
+  }
+
+  .ms-lg-2, .ms-2 { /* Resetea los márgenes específicos para desktop */
+    margin-left: 0 !important;
+  }
+}

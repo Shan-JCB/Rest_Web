@@ -1,0 +1,103 @@
+/* Fondo de la superposición del modal */
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Contenedor del modal */
+.detalle-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  max-width: 500px;
+  width: 90%;
+  animation: slideUp 0.4s ease;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Imagen del producto */
+.detalle-card img {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones cantidad */
+.detalle-card button.btn {
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+/* Título y total */
+.detalle-card h5 {
+  font-weight: 600;
+  color: #212529;
+}
+
+.detalle-card .total-linea {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Botones de acción */
+.detalle-card .btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.detalle-card .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+.detalle-card .btn-primary {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+  color: white;
+}
+
+.detalle-card .btn-primary:hover {
+  background-color: #e07b00;
+  border-color: #e07b00;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .detalle-card {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .detalle-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .detalle-card button.btn {
+    font-size: 0.75rem;
+  }
+}

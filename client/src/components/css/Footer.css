@@ -1,0 +1,115 @@
+/* Footer.css */
+
+.footer-custom {
+  background-color: #262626; /* Un gris oscuro profundo para un aspecto elegante */
+  color: #f8f9fa; /* Blanco muy claro para el texto */
+  padding-top: 3.5rem; /* Más padding en la parte superior */
+  padding-bottom: 2.5rem; /* Más padding en la parte inferior */
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada en la parte superior */
+  animation: fadeInDown 0.8s ease-out; /* Animación de entrada suave desde abajo */
+}
+
+/* Animación de entrada para el footer (si no usas animate.css en el JSX) */
+/* @keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+} */
+
+.footer-brand {
+  color: #FFFFFF !important;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.footer-brand:hover {
+  transform: translateY(-2px); /* Ligero levantamiento al pasar el mouse */
+}
+
+.footer-brand img {
+  max-height: 50px; /* Tamaño del logo en el footer */
+}
+
+.footer-custom h5 {
+  font-weight: 700; /* Negrita para los títulos de las columnas */
+  color: #FFFFFF; /* Títulos en blanco */
+  margin-bottom: 1.5rem; /* Más espacio debajo de los títulos */
+}
+
+.footer-custom ul {
+  padding-left: 0;
+}
+
+.footer-custom ul li {
+  margin-bottom: 0.7rem; /* Espacio entre los ítems de la lista */
+}
+
+.footer-custom .text-muted {
+  color: #adb5bd !important; /* Un gris más claro para el texto general */
+}
+
+.footer-link-hover {
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-flex; /* Para alinear íconos con texto y permitir hover */
+  align-items: center;
+}
+
+.footer-link-hover:hover {
+  color: #FFC107 !important; /* Color amarillo de acento al hover */
+  transform: translateX(5px); /* Pequeño desplazamiento hacia la derecha al hover */
+}
+
+.footer-link-hover i {
+  font-size: 1.1rem; /* Tamaño de los íconos en los enlaces */
+}
+
+.social-icon-hover {
+  transition: color 0.3s ease, transform 0.2s ease;
+  margin-right: 1.2rem; /* Espacio entre íconos */
+}
+
+.social-icon-hover:hover {
+  color: #FFC107 !important; /* Color amarillo de acento al hover */
+  transform: scale(1.1); /* Ligeramente más grande al hover */
+}
+
+.social-icon-hover:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último ícono */
+}
+
+.footer-hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767.98px) {
+  .footer-custom {
+    text-align: center; /* Centrar todo el texto en móviles */
+  }
+
+  .footer-brand {
+    justify-content: center !important; /* Centrar el logo en móviles */
+  }
+
+  .footer-custom ul {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .footer-custom ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-custom h5 {
+    margin-top: 1.5rem; /* Espacio superior para títulos de columna en móvil */
+    margin-bottom: 1rem;
+  }
+
+  .d-flex.justify-content-center.justify-content-md-start {
+    justify-content: center !important; /* Centrar iconos sociales en móvil */
+  }
+
+  .col-6 { /* Para alinear mejor las columnas pequeñas */
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}

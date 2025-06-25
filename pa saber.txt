@@ -1,0 +1,2 @@
+Levantar Fronted: client> npm start
+         Backend: server> node index.js

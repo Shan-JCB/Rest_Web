@@ -1,0 +1,140 @@
+/* LoginPage.css */
+
+/* Fondo general de la página de login */
+.login-page-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('/fondo-login.jpg') center center/cover no-repeat fixed; /* Asegúrate de tener fondo-login.jpg en public/ */
+  min-height: 100vh; /* Altura mínima de la ventana */
+  padding-top: 70px; /* Ajuste para el navbar fijo */
+  /* backdrop-filter: blur(5px); */ /* Descomentar para efecto de desenfoque en el fondo */
+  animation: fadeIn 1s ease-out; /* Animación de entrada para toda la página */
+}
+
+/* Tarjeta principal del formulario de login */
+.login-card {
+  background-color: #ffffff; /* Fondo blanco para la tarjeta */
+  border-radius: 1.5rem; /* Bordes más redondeados */
+  max-width: 450px; /* Ancho máximo de la tarjeta */
+  width: 90%; /* Ancho responsivo */
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25); /* Sombra más pronunciada y suave */
+  padding: 3rem; /* Más padding interno */
+  animation: zoomIn 0.8s ease-out; /* Animación para la aparición de la tarjeta */
+}
+
+/* Estilos del logo */
+.login-logo {
+  max-width: 120px;
+  height: auto;
+  animation: heartBeat 1.5s infinite alternate; /* Animación de pulso para el logo */
+}
+
+/* Título y subtítulo */
+.login-title {
+  color: #A32A29 !important; /* Color de marca */
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.login-card .text-muted {
+    font-size: 1.1rem;
+    color: #6c757d !important;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+/* Inputs y fieldsets */
+.input-group-text {
+  background-color: #e9ecef; /* Fondo suave para los íconos del input */
+  border-right: none;
+  border-color: #dee2e6;
+  border-radius: 0.5rem 0 0 0.5rem; /* Bordes redondeados en la izquierda */
+  font-size: 1.2rem; /* Tamaño de ícono */
+  padding: 0.8rem 1rem;
+}
+
+.form-control-lg {
+  border-radius: 0 0.5rem 0.5rem 0; /* Bordes redondeados en la derecha */
+  border-left: none;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: none !important; /* Elimina el box-shadow por defecto de focus */
+}
+
+.form-control-lg:focus {
+  border-color: #A32A29; /* Color de marca al enfocar */
+  box-shadow: 0 0 0 0.25rem rgba(163, 42, 41, 0.25) !important; /* Sombra de enfoque */
+}
+
+/* Botón de submit */
+.btn-primary {
+  background-color: #A32A29; /* Color de marca para el botón principal */
+  border-color: #A32A29;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.75rem; /* Bordes más redondeados */
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite ease-in-out; /* Animación de pulso para el botón */
+}
+
+.btn-primary:hover {
+  background-color: #8C2423; /* Tono más oscuro al hover */
+  border-color: #8C2423;
+  transform: translateY(-3px); /* Ligero levantamiento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary i {
+  color: #FFFFFF;
+}
+
+/* Mensajes de error */
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  animation: shakeX 0.5s; /* Animación de "shake" para el error */
+}
+
+/* Enlace de registro */
+.login-register-link {
+  color: #A32A29 !important; /* Color de marca para el enlace */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.login-register-link:hover {
+  color: #8C2423 !important; /* Tono más oscuro al hover */
+  text-decoration: underline !important;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 767.98px) {
+  .login-card {
+    padding: 2rem;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+
+  .login-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .form-control-lg, .input-group-text {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .btn-primary {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+  }
+}

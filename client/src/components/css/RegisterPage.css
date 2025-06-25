@@ -1,0 +1,169 @@
+/* RegisterPage.css */
+
+/* Fondo general de la página de registro */
+.register-page-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('/fondo-register.jpg') center center/cover no-repeat fixed; /* Asegúrate de tener fondo-register.jpg en public/ */
+  min-height: 100vh;
+  padding-top: 70px; /* Ajuste para el navbar fijo */
+  animation: fadeIn 1s ease-out;
+}
+
+/* Tarjeta principal del formulario de registro */
+.register-card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  max-width: 700px; /* Ancho máximo un poco más grande para más campos */
+  width: 95%; /* Ancho responsivo */
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+  padding: 3rem;
+  animation: zoomIn 0.8s ease-out;
+}
+
+/* Estilos del logo */
+.register-logo {
+  max-width: 100px;
+  height: auto;
+  animation: heartBeat 1.5s infinite alternate;
+}
+
+/* Título y subtítulo */
+.register-title {
+  color: #A32A29 !important; /* Color de marca */
+  font-size: 2.3rem; /* Un poco más pequeño que login por el texto */
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.register-card .text-muted {
+    font-size: 1.05rem;
+    color: #6c757d !important;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+/* Inputs y fieldsets (comparten estilos con LoginPage.css para consistencia) */
+/* Si ya tienes estos estilos en un archivo compartido (ej. forms.css), puedes omitirlos aquí */
+.input-group-text {
+  background-color: #e9ecef;
+  border-right: none;
+  border-color: #dee2e6;
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-size: 1.1rem; /* Ligeramente más pequeño que login para acomodar más campos */
+  padding: 0.7rem 1rem;
+}
+
+.form-control-lg {
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-left: none;
+  font-size: 1rem; /* Ligeramente más pequeño que login para acomodar más campos */
+  padding: 0.7rem 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: none !important;
+}
+
+.form-control-lg:focus {
+  border-color: #A32A29;
+  box-shadow: 0 0 0 0.25rem rgba(163, 42, 41, 0.25) !important;
+}
+
+/* Botón de submit */
+.btn-success {
+  background-color: #28a745; /* Verde para el botón de registro */
+  border-color: #28a745;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Tono más oscuro al hover */
+  border-color: #218838;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success i {
+  color: #FFFFFF;
+}
+
+/* Mensajes de error y éxito */
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  animation: shakeX 0.5s;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s;
+}
+
+/* Enlace de login */
+.register-login-link {
+  color: #28a745 !important; /* Verde para el enlace de login */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.register-login-link:hover {
+  color: #218838 !important; /* Tono más oscuro al hover */
+  text-decoration: underline !important;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 767.98px) {
+  .register-card {
+    padding: 2rem;
+    max-width: 95%;
+  }
+
+  .register-title {
+    font-size: 2rem;
+  }
+
+  .register-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .form-control-lg, .input-group-text {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .btn-success {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 575.98px) {
+  .register-card {
+    padding: 1.5rem;
+  }
+  .register-title {
+    font-size: 1.8rem;
+  }
+  .register-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .form-control-lg, .input-group-text {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,432 @@
+/* CategoriasPage.css */
+
+.categorias-page-container {
+  background-color: #f8f9fa; /* Fondo gris claro para la página */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  min-height: 90vh; /* Asegura que ocupe casi toda la altura */
+}
+
+.categorias-page-container h2 {
+  color: #343a40; /* Título principal */
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.categorias-page-container h2 i {
+  color: #A32A29; /* Ícono del título en color de marca */
+}
+
+/* Sección de Filtros y Búsqueda */
+.filter-section {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08); /* Sombra más suave */
+  animation: fadeInUp 1s ease-out;
+}
+
+.category-btn {
+  border-color: #A32A29; /* Borde y texto en color de marca */
+  color: #A32A29;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem; /* Botones más redondeados */
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite ease-in-out; /* Animación sutil de pulso */
+}
+
+.category-btn:hover {
+  background-color: #A32A29; /* Fondo de color de marca al pasar el mouse */
+  color: white;
+  transform: translateY(-3px); /* Pequeño levantamiento */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: none; /* Desactiva el pulso al hover */
+}
+
+.category-btn i {
+  font-size: 1.1rem;
+}
+
+.search-bar .input-group-text {
+  background-color: #f1f3f5; /* Fondo más suave para el ícono de búsqueda */
+  border-right: none;
+  border-color: #ced4da;
+  border-radius: 0.75rem 0 0 0.75rem;
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+}
+
+.search-bar .form-control-lg {
+  border-radius: 0 0.75rem 0.75rem 0;
+  border-left: none;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: none !important;
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+}
+
+.search-bar .form-control-lg:focus {
+  border-color: #A32A29;
+  box-shadow: 0 0 0 0.25rem rgba(163, 42, 41, 0.25) !important;
+}
+
+/* Títulos de sección de categoría */
+.category-section {
+  margin-top: 4rem;
+  animation: fadeInUp 0.8s ease-out; /* Animación para cada sección */
+}
+
+.category-title {
+  font-size: 2rem;
+  color: #A32A29 !important; /* Color de marca */
+  border-bottom: 3px solid #FFC107; /* Línea de acento amarilla más gruesa */
+  padding-bottom: 0.8rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.category-title i {
+  font-size: 1.8rem;
+  color: #A32A29;
+}
+
+/* Tarjetas de platillos individuales */
+.dish-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.dish-card:hover {
+  transform: translateY(-8px); /* Mayor levantamiento al pasar el mouse */
+  box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.2);
+}
+
+.card-img-container {
+  height: 200px; /* Altura fija para la imagen */
+  overflow: hidden;
+  position: relative;
+}
+
+.dish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.dish-card:hover .dish-image {
+  transform: scale(1.08); /* Zoom sutil en la imagen al hover */
+}
+
+.dish-card .card-body {
+  padding: 1.5rem;
+}
+
+.dish-card .card-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  color: #343a40;
+}
+
+.dish-card .card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+  min-height: 40px; /* Para mantener consistencia en la altura */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price-tag {
+  font-size: 1.5rem;
+  color: #A32A29 !important; /* Precio en color de marca */
+  font-weight: 700;
+}
+
+.btn-add-to-cart {
+  background-color: #FFC107; /* Botón amarillo de acento */
+  border-color: #FFC107;
+  color: #212529; /* Texto oscuro para contraste */
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #e0a800; /* Tono más oscuro al hover */
+  border-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  animation: none; /* Desactiva el pulso al hover */
+}
+
+.btn-add-to-cart i {
+  font-size: 1rem;
+}
+
+/* Mensajes de estado (carga, error, sin resultados) */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: #A32A29 !important;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.no-results-message {
+  padding: 4rem 0;
+  color: #6c757d;
+}
+
+.no-results-message i {
+  color: #adb5bd;
+  font-size: 4rem;
+}
+
+.no-results-message .lead {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+/* Estilos para el Modal (manteniendo la funcionalidad sin cambios) */
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease; /* Animación para el fondo del modal */
+}
+
+.detalle-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem; /* Bordes más redondeados */
+  width: 95%; /* Más ancho en móviles */
+  max-width: 550px; /* Ancho máximo aumentado */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: zoomIn 0.3s ease; /* Animación de zoom para el modal */
+  text-align: center; /* Centrar contenido dentro del modal */
+}
+
+.btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-image {
+  max-height: 280px !important; /* Altura máxima para la imagen del modal */
+  object-fit: cover;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem !important;
+}
+
+.detalle-card h4 {
+  font-size: 2rem;
+  color: #A32A29; /* Título del modal en color de marca */
+  margin-bottom: 1rem;
+}
+
+.detalle-card p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el texto en el modal */
+}
+
+.detalle-card p strong {
+    color: #333;
+}
+
+.detalle-card p i {
+  color: #A32A29; /* Íconos en color de marca */
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.detalle-card .text-success {
+    font-size: 1.2rem;
+}
+
+.detalle-card .btn-warning {
+  background-color: #FFC107;
+  border-color: #FFC107;
+  color: #212529;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.15rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  animation: bounceIn 0.5s ease-out; /* Animación para el botón del modal */
+}
+
+.detalle-card .btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .categorias-page-container h2 {
+    font-size: 2.4rem;
+  }
+  .category-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  .search-bar .form-control-lg {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+  .category-title {
+    font-size: 1.8rem;
+  }
+  .dish-card .card-title {
+    font-size: 1.3rem;
+  }
+  .price-tag {
+    font-size: 1.4rem;
+  }
+  .btn-add-to-cart {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .detalle-card {
+      padding: 2rem;
+  }
+  .detalle-card h4 {
+      font-size: 1.8rem;
+  }
+  .detalle-card p {
+      font-size: 1rem;
+  }
+  .detalle-card .btn-warning {
+      font-size: 1.1rem;
+      padding: 0.7rem 1.4rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .categorias-page-container h2 {
+    font-size: 2rem;
+  }
+  .filter-section {
+    padding: 1.5rem;
+  }
+  .category-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  .search-bar .form-control-lg {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+  .category-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .category-title i {
+    font-size: 1.5rem;
+  }
+  .card-img-container {
+    height: 180px;
+  }
+  .dish-card .card-title {
+    font-size: 1.2rem;
+  }
+  .price-tag {
+    font-size: 1.3rem;
+  }
+  .detalle-card {
+      padding: 1.5rem;
+  }
+  .detalle-card h4 {
+      font-size: 1.6rem;
+  }
+  .modal-image {
+      max-height: 220px !important;
+  }
+  .detalle-card p {
+      font-size: 0.95rem;
+  }
+  .detalle-card .btn-warning {
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+    .filter-section {
+        padding: 1rem;
+    }
+    .search-bar .input-group-text {
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+    }
+    .search-bar .form-control-lg {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.7rem;
+    }
+    .dish-card .card-body {
+        padding: 1rem;
+    }
+    .dish-card .card-title {
+        font-size: 1.1rem;
+    }
+    .price-tag {
+        font-size: 1.2rem;
+    }
+    .btn-add-to-cart {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .detalle-card {
+        padding: 1rem;
+    }
+    .detalle-card h4 {
+        font-size: 1.4rem;
+    }
+    .detalle-card p {
+        font-size: 0.9rem;
+        flex-direction: column; /* Apila texto y ícono en móviles pequeños */
+        align-items: flex-start;
+        text-align: left;
+    }
+    .detalle-card p i {
+        margin-right: 0;
+        margin-bottom: 0.3rem;
+    }
+}
